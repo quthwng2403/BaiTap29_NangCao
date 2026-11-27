@@ -1,0 +1,5 @@
+# Plain static HTML/CSS site (Bootstrap and jQuery load from CDNs).
+# There is no package.json or build step: Netlify publishes the folder as-is.
+[build]
+  command = ""
+  publish = "AlbumAnh_BaiTap29_NangCao/AlbumAnh_BaiTap29"
