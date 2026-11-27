@@ -1,0 +1,189 @@
+/* ==========================================================================
+   CSS TÙY CHỈNH CHO ALBUM HÌNH ẢNH BOOTSTRAP NÂNG CAO - BÀI TẬP 29
+   ========================================================================== */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Header / Banner giới thiệu trang */
+.album-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #0ea5e9 100%);
+    color: #ffffff;
+    padding: 64px 0;
+    margin-bottom: 40px;
+}
+
+.album-hero h1 {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+/* Thẻ Card chứa từng ảnh trong lưới Bootstrap */
+.album-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.album-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.22);
+}
+
+/* Khung bao ảnh để tạo hiệu ứng Overlay khi di chuột (hover) */
+.album-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.album-img-wrapper img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.album-card:hover .album-img-wrapper img {
+    transform: scale(1.08);
+}
+
+/* Lớp phủ Overlay (pointer-events: none để cú click xuyên thẳng xuống thẻ <img>) */
+.album-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.68);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.album-card:hover .album-overlay {
+    opacity: 1;
+}
+
+.album-overlay h5 {
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #93c5fd;
+}
+
+.album-overlay p {
+    font-size: 0.92rem;
+    margin-bottom: 10px;
+}
+
+.album-zoom-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: #2563eb;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+/* Phần Caption bên dưới mỗi ảnh */
+.card-body {
+    background-color: #ffffff;
+}
+
+.card-title {
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+/* ==========================================================================
+   TÙY CHỈNH GIAO DIỆN BOOTSTRAP MODAL (BACKGROUND, VIỀN, HIỆU ỨNG)
+   ========================================================================== */
+
+#imageModal .modal-backdrop.show {
+    opacity: 0.85;
+}
+
+.custom-modal-content {
+    background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+    color: #f8fafc;
+    border: 2px solid #38bdf8;
+    border-radius: 16px;
+    box-shadow: 0 24px 60px rgba(14, 165, 233, 0.35);
+    overflow: hidden;
+    animation: modalZoomIn 0.28s ease-out;
+}
+
+@keyframes modalZoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.custom-modal-header {
+    background: rgba(15, 23, 42, 0.85);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 16px 24px;
+}
+
+.custom-modal-header .modal-title {
+    font-weight: 700;
+    color: #7dd3fc;
+    letter-spacing: 0.3px;
+}
+
+.custom-modal-header .close {
+    color: #f8fafc;
+    opacity: 0.85;
+    text-shadow: none;
+    font-size: 1.6rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.custom-modal-header .close:hover {
+    color: #38bdf8;
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.custom-modal-body {
+    background-color: #0b1120;
+    padding: 24px;
+}
+
+#modalImage {
+    max-height: 70vh;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.custom-modal-footer {
+    background: rgba(15, 23, 42, 0.85);
+    border-top: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 14px 24px;
+}
+
+footer {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    padding: 28px 0;
+    margin-top: 48px;
+}

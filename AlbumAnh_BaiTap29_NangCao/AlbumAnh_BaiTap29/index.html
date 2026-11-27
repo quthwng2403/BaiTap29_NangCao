@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album hình ảnh sống mãi với thời gian</title>
+
+    <!-- Bootstrap 4.4.1 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <!-- CSS tùy chỉnh giao diện Album & Modal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ==================== 1. THANH ĐIỀU HƯỚNG (NAVBAR) ==================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#">
+                📷 KÝ ỨC THỜI GIAN
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarAlbum"
+                    aria-controls="navbarAlbum" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarAlbum">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bo-suu-tap">Bộ sưu tập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gioi-thieu">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lien-he">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== 2. HEADER / BANNER TIÊU ĐỀ ==================== -->
+    <header class="album-hero text-center">
+        <div class="container">
+            <h1 class="display-4 mb-3">Album hình ảnh sống mãi với thời gian</h1>
+            <p class="lead mb-4 mx-auto" style="max-width: 720px;">
+                Lưu giữ những khoảnh khắc thiên nhiên, cảnh sắc bình yên và dấu ấn kỷ niệm đẹp đẽ.
+                Nhấp vào bất kỳ bức ảnh nào để phóng to chi tiết trong cửa sổ Modal.
+            </p>
+            <a href="#bo-suu-tap" class="btn btn-light btn-lg font-weight-bold text-primary shadow-sm">
+                Khám phá Album
+            </a>
+        </div>
+    </header>
+
+    <!-- ==================== 3. LƯỚI ALBUM HÌNH ẢNH (BOOTSTRAP GRID) ==================== -->
+    <main class="container" id="bo-suu-tap">
+        <div class="text-center mb-4">
+            <h2 class="font-weight-bold text-dark">BỘ SƯU TẬP KHOẢNH KHẮC</h2>
+            <p class="text-muted">Click vào ảnh nhỏ bên dưới để mở xem ảnh lớn độ phân giải cao trong Modal</p>
+        </div>
+
+        <div class="row">
+
+            <!-- Ảnh 1 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card album-card">
+                    <div class="album-img-wrapper">
+                        <img src="images/anh1.jpg"
+                             data-toggle="modal"
+                             data-target="#imageModal"
+                             data-src="images/anh1_large.jpg"
+                             data-title="1. Hoàng hôn trên biển"
+                             data-desc="Khoảnh khắc mặt trời chạm đường chân trời, mang lại cảm giác bình yên khó quên."
+                             class="img-fluid"
+                             alt="Hoàng hôn trên biển">
+                        <div class="album-overlay">
+                            <h5>Hoàng Hôn Trên Biển</h5>
+                            <p>Ánh nắng cuối ngày nhuộm vàng mặt biển tĩnh lặng.</p>
+                            <span class="album-zoom-badge">🔍 Nhấp xem ảnh lớn</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">1. Hoàng hôn trên biển</h5>
+                        <p class="card-text text-muted">Khoảnh khắc mặt trời chạm đường chân trời, mang lại cảm giác bình yên khó quên.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 2 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card album-card">
+                    <div class="album-img-wrapper">
+                        <img src="images/anh2.jpg"
+                             data-toggle="modal"
+                             data-target="#imageModal"
+                             data-src="images/anh2_large.jpg"
+                             data-title="2. Rừng thông sương sớm"
+                             data-desc="Những tán thông vươn mình đón nắng mai trên sườn đồi phủ sương mờ."
+                             class="img-fluid"
+                             alt="Rừng thông sương sớm">
+                        <div class="album-overlay">
+                            <h5>Rừng Thông Sương Sớm</h5>
+                            <p>Không khí trong lành giữa đại ngàn xanh mát.</p>
+                            <span class="album-zoom-badge">🔍 Nhấp xem ảnh lớn</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">2. Rừng thông sương sớm</h5>
+                        <p class="card-text text-muted">Những tán thông vươn mình đón nắng mai trên sườn đồi phủ sương mờ.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 3 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card album-card">
+                    <div class="album-img-wrapper">
+                        <img src="images/anh3.jpg"
+                             data-toggle="modal"
+                             data-target="#imageModal"
+                             data-src="images/anh3_large.jpg"
+                             data-title="3. Con đường mùa thu"
+                             data-desc="Hàng cây thay lá nhuộm đỏ góc phố quen thuộc mỗi độ thu về."
+                             class="img-fluid"
+                             alt="Con đường mùa thu lá vàng">
+                        <div class="album-overlay">
+                            <h5>Con Đường Mùa Thu</h5>
+                            <p>Sắc vàng cam rực rỡ gợi nhớ bao kỷ niệm thanh xuân.</p>
+                            <span class="album-zoom-badge">🔍 Nhấp xem ảnh lớn</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">3. Con đường mùa thu</h5>
+                        <p class="card-text text-muted">Hàng cây thay lá nhuộm đỏ góc phố quen thuộc mỗi độ thu về.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 4 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card album-card">
+                    <div class="album-img-wrapper">
+                        <img src="images/anh4.jpg"
+                             data-toggle="modal"
+                             data-target="#imageModal"
+                             data-src="images/anh4_large.jpg"
+                             data-title="4. Đêm sao trên đỉnh núi"
+                             data-desc="Vẻ đẹp kỳ vĩ của bầu trời đêm ngàn sao giữa không gian tĩnh mịch."
+                             class="img-fluid"
+                             alt="Đêm đầy sao trên đỉnh núi">
+                        <div class="album-overlay">
+                            <h5>Đêm Sao Đỉnh Núi</h5>
+                            <p>Bầu trời đêm lấp lánh trên những đỉnh núi tuyết.</p>
+                            <span class="album-zoom-badge">🔍 Nhấp xem ảnh lớn</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">4. Đêm sao trên đỉnh núi</h5>
+                        <p class="card-text text-muted">Vẻ đẹp kỳ vĩ của bầu trời đêm ngàn sao giữa không gian tĩnh mịch.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 5 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card album-card">
+                    <div class="album-img-wrapper">
+                        <img src="images/anh5.jpg"
+                             data-toggle="modal"
+                             data-target="#imageModal"
+                             data-src="images/anh5_large.jpg"
+                             data-title="5. Phố cổ bình yên"
+                             data-desc="Dãy nhà tường vàng cổ kính trầm mặc dưới ánh nắng chiều dịu nhẹ."
+                             class="img-fluid"
+                             alt="Phố cổ bình yên">
+                        <div class="album-overlay">
+                            <h5>Phố Cổ Bình Yên</h5>
+                            <p>Những mái ngói rêu phong lưu giữ dấu ấn thời gian.</p>
+                            <span class="album-zoom-badge">🔍 Nhấp xem ảnh lớn</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">5. Phố cổ bình yên</h5>
+                        <p class="card-text text-muted">Dãy nhà tường vàng cổ kính trầm mặc dưới ánh nắng chiều dịu nhẹ.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ảnh 6 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card album-card">
+                    <div class="album-img-wrapper">
+                        <img src="images/anh6.jpg"
+                             data-toggle="modal"
+                             data-target="#imageModal"
+                             data-src="images/anh6_large.jpg"
+                             data-title="6. Bình minh trên mặt hồ"
+                             data-desc="Sắc hồng tím buổi sớm phản chiếu lung linh trên làn nước trong xanh."
+                             class="img-fluid"
+                             alt="Hồ nước phản chiếu bình minh">
+                        <div class="album-overlay">
+                            <h5>Bình Minh Mặt Hồ</h5>
+                            <p>Mặt nước phẳng lặng soi bóng mây trời rạng rỡ.</p>
+                            <span class="album-zoom-badge">🔍 Nhấp xem ảnh lớn</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">6. Bình minh trên mặt hồ</h5>
+                        <p class="card-text text-muted">Sắc hồng tím buổi sớm phản chiếu lung linh trên làn nước trong xanh.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ==================== 4. GIỚI THIỆU NGẮN & FOOTER ==================== -->
+    <section class="container mt-4" id="gioi-thieu">
+        <div class="p-4 bg-white rounded shadow-sm border">
+            <h4 class="font-weight-bold text-primary">Tính năng nâng cao - Bài tập 29</h4>
+            <p class="mb-0 text-muted">
+                Nâng cấp từ Bài tập 28 bằng cách tích hợp <strong>Bootstrap Modal</strong> và <strong>JavaScript</strong>:
+                khi người dùng nhấp vào ảnh thumbnail, hệ thống tự động nạp ảnh kích thước lớn (<code>_large.jpg</code>),
+                cập nhật tiêu đề và mô tả tương ứng vào hộp thoại xem ảnh.
+            </p>
+        </div>
+    </section>
+
+    <footer class="text-center" id="lien-he">
+        <div class="container">
+            <p class="mb-1 font-weight-bold text-white">Album hình ảnh sống mãi với thời gian</p>
+            <p class="mb-0 small">Thực hành Lập trình Web - Bài tập 29 (Bootstrap Modal &amp; JavaScript)</p>
+        </div>
+    </footer>
+
+    <!-- ==================== 5. BOOTSTRAP MODAL XEM ẢNH LỚN ==================== -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content custom-modal-content">
+                <div class="modal-header custom-modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Xem ảnh</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center custom-modal-body">
+                    <img id="modalImage" src="" class="img-fluid" alt="Ảnh lớn"/>
+                    <p id="modalCaption" class="mt-3 mb-0 text-light small"></p>
+                </div>
+                <div class="modal-footer custom-modal-footer">
+                    <span id="modalCounter" class="mr-auto text-info small font-weight-bold"></span>
+                    <button type="button" class="btn btn-outline-info btn-sm" id="prevImageBtn">&laquo; Ảnh trước</button>
+                    <button type="button" class="btn btn-outline-info btn-sm" id="nextImageBtn">Ảnh sau &raquo;</button>
+                    <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thư viện JavaScript của Bootstrap 4.4.1 (jQuery, Popper.js, Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <!-- Script xử lý sự kiện click vào ảnh nhỏ để hiển thị ảnh lớn trong Modal -->
+    <script>
+        const galleryImages = Array.from(document.querySelectorAll('img[data-toggle="modal"]'));
+        let currentIndex = 0;
+
+        function showImageInModal(index) {
+            const targetImg = galleryImages[index];
+            if (!targetImg) return;
+
+            currentIndex = index;
+            const src = targetImg.getAttribute('data-src');
+            const title = targetImg.getAttribute('data-title') || 'Xem ảnh';
+            const desc = targetImg.getAttribute('data-desc') || '';
+
+            document.getElementById('modalImage').setAttribute('src', src);
+            document.getElementById('imageModalLabel').textContent = title;
+            document.getElementById('modalCaption').textContent = desc;
+            document.getElementById('modalCounter').textContent = `Ảnh ${index + 1} / ${galleryImages.length}`;
+        }
+
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', function() {
+                showImageInModal(index);
+            });
+        });
+
+        document.getElementById('prevImageBtn').addEventListener('click', function() {
+            const prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            showImageInModal(prevIndex);
+        });
+
+        document.getElementById('nextImageBtn').addEventListener('click', function() {
+            const nextIndex = (currentIndex + 1) % galleryImages.length;
+            showImageInModal(nextIndex);
+        });
+    </script>
+</body>
+</html>
